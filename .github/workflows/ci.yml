@@ -68,7 +68,7 @@ jobs:
             adb shell input keyevent 82
             ./scripts/test-android.sh
   test-ios:
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -109,7 +109,7 @@ jobs:
           ./scripts/test-ios.sh
 
   test-ios-embedded:
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -150,7 +150,7 @@ jobs:
           ./scripts/test-ios.sh
 
   test-ios-sqlcipher:
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -191,7 +191,7 @@ jobs:
           ./scripts/test-ios.sh
 
   test-ios-libsql:
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
