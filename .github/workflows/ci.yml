@@ -68,7 +68,7 @@ jobs:
             adb shell input keyevent 82
             ./scripts/test-android.sh
   test-ios:
-    runs-on: macos-14
+    runs-on: macos-latest
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -104,12 +104,15 @@ jobs:
         env:
           NO_FLIPPER: 1
 
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
+
       - name: run tests
         run: |
           ./scripts/test-ios.sh
 
   test-ios-embedded:
-    runs-on: macos-14
+    runs-on: macos-latest
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -145,12 +148,15 @@ jobs:
         env:
           NO_FLIPPER: 1
 
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
+
       - name: run tests
         run: |
           ./scripts/test-ios.sh
 
   test-ios-sqlcipher:
-    runs-on: macos-14
+    runs-on: macos-latest
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
@@ -186,12 +192,15 @@ jobs:
         env:
           NO_FLIPPER: 1
 
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
+
       - name: run tests
         run: |
           ./scripts/test-ios.sh
 
   test-ios-libsql:
-    runs-on: macos-14
+    runs-on: macos-latest
     env:
       TURBO_CACHE_DIR: .turbo/ios
     steps:
