@@ -104,6 +104,9 @@ jobs:
         env:
           NO_FLIPPER: 1
 
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
+
       - name: run tests
         run: |
           ./scripts/test-ios.sh
@@ -145,6 +148,9 @@ jobs:
         env:
           NO_FLIPPER: 1
 
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
+
       - name: run tests
         run: |
           ./scripts/test-ios.sh
@@ -185,6 +191,9 @@ jobs:
           bundle exec pod install
         env:
           NO_FLIPPER: 1
+
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
 
       - name: run tests
         run: |
